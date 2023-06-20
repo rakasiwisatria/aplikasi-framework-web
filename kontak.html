@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!--CSS   -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>SweetHome- Kontak</title>
+
+    <style>
+      #kontak {
+        min-height: 100vh;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- header -->
+    <nav
+      class="navbar navbar-expand-lg sticky-top"
+      style="background-color: #435093"
+    >
+      <div class="container-fluid">
+        <img
+          src="img/logo.png"
+          width="82"
+          height="73"
+          class="d-inline-block align-text-middle ms-3"
+        />
+        <a class="navbar-brand text-white" href="index.html">SWEET HOME</a>
+      </div>
+    </nav>
+
+    <!-- halaman beranda -->
+    <div class="container-fluid py-5" id="kontak">
+      <div class="row">
+        <div class="col-lg-5 py-5 px-5">
+          <h1 class="text-white fw-bold lh-base" style="font-size: 40px">
+            Temukan Rumah Impianmu
+          </h1>
+          <h5 class="text-white mt-4 fw-bold" style="font-size: 20px">
+            Sweet Home
+          </h5>
+          <ul class="list-unstyled small text-muted">
+            <li class="mb-2 text-white mt-3 fw-light" style="font-size: 20px">
+              Hadir untuk membantu kamu dalam menemukan rumah impian yang kamu
+              dambakan dengan harga terjangkau namun berkualitas
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-6 overflow-hidden p-5 p-sm-3">
+          <form class="row card p-3">
+            <div class="col-12 mb-2">
+              <label for="nama" class="form-label">Nama</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nama"
+                placeholder="Raka.."
+              />
+            </div>
+            <div class="col-12 mb-2">
+              <label for="alamat" class="form-label">Alamat</label>
+              <input
+                type="text"
+                class="form-control"
+                id="alamat"
+                placeholder="Apartment, studio, or floor"
+              />
+            </div>
+            <div class="row">
+              <div class="col-4 mb-2">
+                <label for="kota" class="form-label">Kota</label>
+                <input type="text" class="form-control" id="kota" />
+              </div>
+              <div class="col-4 mb-2">
+                <label for="provinsi" class="form-label">provinsi</label>
+                <input type="text" class="form-control" id="provinsi" />
+              </div>
+              <div class="col-4 mb-2">
+                <label for="kodepos" class="form-label">kode pos</label>
+                <input type="text" class="form-control" id="kodepos" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6 mb-2">
+                <label for="nohp" class="form-label">nohp</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nohp"
+                  placeholder="Raka.."
+                />
+              </div>
+              <div class="col-6 mb-2">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="email"
+                  placeholder="raka@gmail.com"
+                />
+              </div>
+            </div>
+            <div class="col-12 mb-2">
+              <label for="" class="form-label">Subjek</label>
+              <textarea
+                class="form-control"
+                id=""
+                placeholder="Masukan Pesan anda"
+              ></textarea>
+            </div>
+            <div class="col-12 mt-3">
+              <button type="submit" class="btn btn-primary">Kirim</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- end halaman beranda -->
+
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("demo");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        captionText.innerHTML = dots[slideIndex - 1].alt;
+      }
+    </script>
+  </body>
+</html>

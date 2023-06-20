@@ -1,0 +1,41 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+#beranda,
+#kontak {
+  background: linear-gradient(
+    to right,
+    rgba(83, 100, 186, 1),
+    rgba(177, 181, 205, 1)
+  );
+}
+
+#tentang {
+  background: #c7ccea;
+  height: 755px;
+  position: relative;
+}
+
+#tentang .content-tentang {
+  position: absolute;
+  top: 180px;
+  left: 0;
+  width: 500px;
+  width: auto;
+  z-index: 2;
+}
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+.demo {
+  opacity: 0.6;
+}
